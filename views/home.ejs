@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head.ejs %>
+    <title>TODO App</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-lg-12" style="text-align: center;color: #E84A5F;">Notice: By clicking on tasks, they will remove!</h1>
+            <div class="hidden-md hidden-lg col-sm-12 col-xs-12" style="padding: 0px;">
+                <form action="/tasks" method="POST">
+                    <div class="col-sm-10" style="padding: 0px;">
+                        <input type="text" class="input" placeholder="Enter Your Tasks here..." name="value" value="">
+                    </div>
+                    <div class="col-sm-2" style="padding: 0px;float: right;">
+                        <input type="submit" value="Submit" class="submit-button">
+                    </div>
+                </form>
+            </div>
+            <div class="hidden-sm hidden-xs col-md-12 col-lg-12" style="padding: 0px;margin-left: 35px;">
+                <form action="/tasks" method="POST">
+                    <div class="col-sm-10" style="padding: 0px;">
+                        <input type="text" class="input" placeholder="Enter Your Tasks here..." name="task" value="">
+                    </div>
+                    <div class="col-sm-2" style="padding: 0px;float: right;">
+                        <input type="submit" value="Submit" class="submit-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <ul>
+                <%
+                    let tasksLength = tasks.length;
+                    for(let i = 0; i < tasksLength; i++){
+                %>
+                <li class="col-lg-10" data-id=<%= tasks[i]._id %> data-taskName='<%= tasks[i].taskName %>' > <%= String(tasks[i].taskName) %> </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+
+    <% include partials/scripts.ejs %>
+  </body>
+</html>

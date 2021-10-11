@@ -1,0 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+body {
+  background: #031634;
+  color: #DAB760;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 25px;
+}
+
+.input {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+  font-size: 20px;
+  border: 2px solid white;
+  background: #033649;
+  color: white;
+  padding: 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.submit-button {
+  margin-top: 25%;
+  margin-bottom: 5%;
+  font-size: 20px;
+  border: 2px solid white;
+  background: #033649;
+  color: white;
+  padding: 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  &:hover {  cursor: pointer;  }
+}
+.row:nth-child(2) {
+  margin-left: 5%;
+  li{
+    font-size: 30px;
+    &:hover { cursor: pointer; background: #E84A5F; }
+  }
+}
